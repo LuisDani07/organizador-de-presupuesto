@@ -1,10 +1,27 @@
-import { useState } from "react"
-
+import { useState, useContext } from "react"
+import {AppContext} from '../context/AppContext'
 function AddExpense() {
+  const {dispatch, expenses}=useContext(AppContext);
   const [name, setName]=useState('');
   const [cost, setCost]=useState('');
+  const onSubmit=(e)=>{
+    e.preventDefault();
+
+
+    const expense={
+      id:(expenses.length)+1,
+      name:name,
+      cost:parseInt(cost)
+    };
+
+    dispatch({
+      type:'ADD_EXPENSE',
+      payload:expense
+    })
+     
+  }
   return (
-      <form>
+      <form onSubmit={onSubmit}>
           <div className="row">
             <div className="col-sm">
                 <label for="name">Name</label>
