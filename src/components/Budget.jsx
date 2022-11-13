@@ -2,7 +2,7 @@
 
 function Budget() {
   return (
-    <div className="alert alert secondary">
+    <div className="alert alert-secondary">
         <span>Budget: $ 200</span>
     </div>
   )
