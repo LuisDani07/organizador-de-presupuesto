@@ -8,7 +8,8 @@ function App() {
   
 
   return (
-    <div className="container">
+<AppProvider>
+     <div className="container">
                   <h1 className="mt-3">my budget planner</h1>
                   <div className="row mt3">
                      <div className="col-sm ">
@@ -34,6 +35,8 @@ function App() {
           </div>
         </div>
     </div>
+</AppProvider>
+
 
   )
 }
