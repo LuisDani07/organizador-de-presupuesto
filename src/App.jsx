@@ -3,6 +3,7 @@ import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal'
 import ExpenseList from './components/ExpenseList';
 import AddExpense from './components/AddExpense';
+import {AppProvider} from './context/AppContext'
 function App() {
   
 
